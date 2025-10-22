@@ -3,29 +3,25 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
-  <meta property="og:url" content="URL OF THE WEBSITE" />
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <!-- Social/SEO -->
+  <meta name="description" content="FORLA: Federated object-centric representation learning with slot attention. A two-stage student–teacher framework that learns compact cross-domain features across clients.">
+  <meta property="og:title" content="FORLA: Federated Object-centric Representation Learning with Slot Attention" />
+  <meta property="og:description" content="A two-stage federated object-centric framework that learns compact, generalizable visual representations via slot attention." />
+  <meta property="og:url" content="https://pcasolab.github.io/FORLA/" />
+  <!-- 1200x630 preferred -->
+  <meta property="og:image" content="static/images/forla_stages.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:title" content="FORLA: Federated Object-centric Representation Learning with Slot Attention">
+  <meta name="twitter:description" content="Two-stage federated object-centric framework with slot attention and shared adapters, outperforming centralized baselines on object discovery.">
+  <!-- 1200x600 preferred -->
+  <meta name="twitter:image" content="static/images/forla_stages.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="federated learning, object-centric learning, slot attention, foundation models, representation learning, unsupervised, multi-domain">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>SDSeg</title>
+  <title>FORLA</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -46,70 +42,55 @@
 
 <body>
 
-
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              Title of the paper</h1>
+              FORLA: Federated Object-centric Representation Learning with Slot Attention
+            </h1>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://lin-tianyu.github.io/" target="_blank">Tianyu Lin</a><sup>1*</sup></span>
-              <!-- <span class="author-block">
-                <a target="_blank">Zhiguang Chen</a><sup>2</sup>,</span>
-              <span class="author-block">
-                <a href="https://github.com/zzzyzh" target="_blank">Zhonghao Yan</a><sup>3</sup>,</span>
-              <span class="author-block">
-                <a href="https://github.com/yuweijiang" target="_blank">Weijiang Yu</a><sup>2*</sup>,</span>
-              <span class="author-block">
-                <a target="_blank">Fudan Zheng</a><sup>2*</sup></span> -->
+              <span class="author-block">Guiqiu Liao<sup>1</sup></span>
+              <span class="author-block">Matja&#382; Jogan<sup>1</sup></span>
+              <span class="author-block">Eric Eaton<sup>2</sup></span>
+              <span class="author-block">Daniel A. Hashimoto<sup>1,2</sup></span>
             </div>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <sup>1</sup>Institution<br>
-                <!-- {<sup>1</sup>School of Biomedical Engineering, 
-                <sup>2</sup>School of Computer Science and Engineering}, Sun Yat-sen University<br>
-                <sup>3</sup>International School, Beijing University of Posts and Telecommunications -->
+                <sup>1</sup>PCASO Laboratory, Dept. of Surgery, University of Pennsylvania<br>
+                <sup>2</sup>Dept. of Computer and Information Science, University of Pennsylvania
               </span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span><br>
-              <span class="author-block" style="background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 0)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;line-height: 1.5;"><b>Conference/Journal Name</b></span>
+              <span class="eql-cntrb"><small><br>Contact: <a href="mailto:guiqiu.liao@pennmedicine.upenn.edu">guiqiu.liao@pennmedicine.upenn.edu</a></small></span><br>
+              <span class="author-block" style="background: linear-gradient(to right, rgb(75,0,130), rgb(135,206,235), rgb(75,0,130)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;"><b>Preprint</b></span>
             </div>
-
 
             <div class="column has-text-centered">
               <div class="publication-links">
-            <!-- ArXiv abstract Link -->
-            <span class="link-block">
-              <a href="https://arxiv.org/abs/2406.18361" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="ai ai-arxiv"></i>
-                </span>
-                <span>ArXiv</span>
-              </a>
-            </span>
-
-              <!-- Arxiv PDF link -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2406.18361.pdf" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Arxiv Paper</span>
-                </a>
-              </span>
-
-                <!-- Github link -->
+                <!-- ArXiv -->
                 <span class="link-block">
-                  <a href="https://github.com/lin-tianyu/Stable-Diffusion-Seg" target="_blank"
+                  <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- PDF -->
+                <span class="link-block">
+                  <a href="files/FORLA.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>PDF</span>
+                  </a>
+                </span>
+
+                <!-- Code -->
+                <span class="link-block">
+                  <a href="https://github.com/PCASOlab/FORLA" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
@@ -122,253 +103,191 @@
     </div>
   </section>
 
-
-  <!-- Teaser-->
+  <!-- Teaser -->
   <section class="hero teaser">
     <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="static/images/framework-v2.jpg" alt="MY ALT TEXT" , width="700" />
-        <h4 class="subtitle has-text-centered">The overview of the proposed method.</h4>
+      <div class="hero-body has-text-centered">
+        <!-- Put your figure at static/images/forla_stages.jpg -->
+        <img src="static/images/forla_stages.jpg" alt="FORLA two-stage pipeline" width="900" />
+        <h4 class="subtitle has-text-centered">
+          Two-stage training pipeline. <b>Stage&nbsp;1:</b> representation distillation &amp; alignment (EMA teacher–student).
+          <b>Stage&nbsp;2:</b> federated representation rediscovery (Local &amp; Global FedAvg).
+        </h4>
       </div>
     </div>
   </section>
   <!-- End teaser -->
 
+  <!-- Highlights -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right,  indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent;line-height: 1.5;">
-            Highlights</h2>
+          <h2 class="title is-2" style="background: linear-gradient(to right, indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+            Highlights
+          </h2>
         </div>
       </div>
-      <p>
-        🌟 Highlights are the summary of the proposed work. They can be contributions in the paper or preferred key points.<br>
-        🌟 Point 2
-        
-      </p>
+      <div class="content">
+        <p>
+          🌟 <b>Federated object-centric learning:</b> learns object-level slots that transfer across heterogeneous clients without labels.<br>
+          🌟 <b>Shared adapter + slot attention:</b> collaboratively adapts foundation-model features and reconstructs compact representations.<br>
+          🌟 <b>Two-branch teacher–student:</b> student reconstructs full features; teacher supervises low-dimensional adapted features via EMA.<br>
+          🌟 <b>Cross-domain alignment:</b> slot attention bridges clients to discover distributed concepts.<br>
+          🌟 <b>Strong results:</b> outperforms centralized baselines on object discovery and generalizes across domains with a compact universal representation.
+        </p>
+      </div>
     </div>
   </section>
 
+  <!-- Motivation -->
   <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right,  indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent;line-height: 1.5;">
-            Motivation</h2>
-        <h5 class="title is-5" style="text-align: center;">
-          Using a single sentence to summarize the motivation of the paper.
-        </h5>
+          <h2 class="title is-2" style="background: linear-gradient(to right, indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+            Motivation
+          </h2>
+          <h5 class="title is-5" style="text-align: center;">
+            Unlabeled, heterogeneous client data demands label-free, generalizable representations.
+          </h5>
 
-        <div class="columns is-centered">
-        <!-- reenact. -->
-        <div class="column">
-          <div class="content">
-            <h4 class="title is-5" style="text-align: center;">🔒 Challenges</h4>
-            <p>
-            (1) blablabla<br>
-            (2) blablabla
-            </p>
-          </div>
-        </div>
-        <!--/ reenact -->
-        <!-- swap. -->
-        <div class="column">
-          <h4 class="title is-5" style="text-align: center;">🔑 Solutions</h4>
           <div class="columns is-centered">
-            <div class="column content">
-              <p>
-              <!-- <br> -->
-            (1) blablabla<br>
-            (2) blablabla
-              </p>
+            <div class="column">
+              <div class="content">
+                <h4 class="title is-5" style="text-align: center;">🔒 Challenges</h4>
+                <p>
+                  (1) Learn features <i>jointly informative</i> across clients with no labels.<br>
+                  (2) Disentangle <i>client-specific factors</i> while preserving shared object structure.
+                </p>
+              </div>
+            </div>
+
+            <div class="column">
+              <h4 class="title is-5" style="text-align: center;">🔑 Solutions</h4>
+              <div class="columns is-centered">
+                <div class="column content">
+                  <p>
+                    (1) A <b>shared adapter</b> + <b>slot attention</b> trained collaboratively.<br>
+                    (2) A <b>teacher–student</b> architecture with EMA and <b>(Local+Global) FedAvg</b> to align object-level slots across clients.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <!--/ swap. -->
-      </div>
 
-            <div class="hero-body">
-              <img src="static/images/LatentRep.jpg" alt="MY ALT TEXT" , width="1000" />
-              <h4 class="subtitle has-text-centered"><b>Caption of the figure.</b></h4>
-              Detailed descriptions.
-            </div>
+          <!-- Optional extra image area (you can replace/remove) -->
+          <!--
+          <div class="hero-body">
+            <img src="static/images/extra_figure.jpg" alt="Extra visualization" width="1000" />
+            <h4 class="subtitle has-text-centered"><b>Optional additional visualization.</b></h4>
+            Brief description.
+          </div>
+          -->
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Stage 1 -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right,  indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent;line-height: 1.5;">
-            Module 1</h2>
-            <h5 class="title is-5" style="text-align: center;">
-              Single sentence to summarize the first module of the paper.
-            </h5>
-            <div class="hero-body">
-              <img src="static/images/ReverseCurve.png" alt="MY ALT TEXT" , width="900" />
-              <h4 class="subtitle has-text-centered"><b>Caption of the figure.</b></h4>
-            </div>
-            <!-- <div class="hero-body">
-              <img src="static/images/ReverseProcess.jpeg" alt="MY ALT TEXT" , width="1000" />
-              <h4 class="subtitle has-text-centered">Visualization of the predicted probability maps in
-                reverse process.</h4>
-            </div> -->
+          <h2 class="title is-2" style="background: linear-gradient(to right, indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+            Stage 1: Representation Distillation &amp; Alignment
+          </h2>
+          <h5 class="title is-5" style="text-align: center;">
+            EMA teacher–student decoders align adapted features from foundation models.
+          </h5>
+          <div class="hero-body">
+            <img src="static/images/forla_stages.jpg" alt="Stage 1 overview" width="900" />
+            <h4 class="subtitle has-text-centered"><b>The teacher reconstructs adapted features; the student reconstructs full features.</b></h4>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Video carousel -->
-   <section class="hero is-small">
-   <div class="hero-body">
-     <div class="container">
-       <div id="results-carousel" class="carousel results-carousel">
-         <div class="item item1" style="text-align:center;">
-           <img src="static/images/ReverseProcess-1.png" alt="MY ALT TEXT" , width="700" />
-         </div>
-         <div class="item item2" style="text-align:center;">
-           <img src="static/images/ReverseProcess-2.png" alt="MY ALT TEXT" , width="700" />
-         </div>
-       </div>
-     </div>
-   </div>
-   <h4 class="subtitle has-text-centered"><b>Showing rolling images here.</b></h4>
- </section> 
-   <!-- End video carousel -->
   </section>
 
+  <!-- Stage 2 -->
   <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right,  indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent;line-height: 1.5;">
-            Module 2</h2>
-            <h5 class="title is-5" style="text-align: center;">
-            Single sentence to summarize the second module of the paper.
-            </h5>
-            <p style="text-align: left;">
-              <b>👉 Key point 1</b>: bnlablabla.<br>
-              <b>👉 Key point 2</b>: blablabla.
-
-            </p>
-            <div class="hero-body">
-              <img src="static/images/StabilityEvaluationV4.jpeg" alt="MY ALT TEXT" , width="1000" />
-              <h2 class="subtitle has-text-centered"><b>Caption of the figure.</b></h2>
-            </div>
+          <h2 class="title is-2" style="background: linear-gradient(to right, indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+            Stage 2: Federated Representation Rediscovery
+          </h2>
+          <h5 class="title is-5" style="text-align: center;">
+            Local + Global FedAvg refine slot attention to align object-centric representations across clients.
+          </h5>
+          <p style="text-align: left;">
+            <b>👉 Local FedAvg:</b> synchronizes teacher–student branches within each client cohort.<br>
+            <b>👉 Global FedAvg:</b> aggregates adapters and slot attention on the server to unify cross-domain object slots.
+          </p>
+          <!-- Optional stage-specific image -->
+          <!-- <div class="hero-body">
+            <img src="static/images/stage2_specific.png" alt="Stage 2 visualization" width="1000" />
+            <h2 class="subtitle has-text-centered"><b>Stage 2 aggregation.</b></h2>
+          </div> -->
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Other Qualitative (optional) -->
+  <!-- Keep/remove this block as needed
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right,  indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent;line-height: 1.5;">
-            Other Qualitative Analysis</h2>
-            <div class="hero-body">
-              <img src="static/images/Conditioner.png" alt="MY ALT TEXT" , width="900" />
-              <h2 class="subtitle has-text-centered"><b>Caption of the figure.</b></h2>
-                  Detailed descriptions.
-            </div>
+          <h2 class="title is-2" style="background: linear-gradient(to right, indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+            Additional Qualitative Results
+          </h2>
+          <div class="hero-body">
+            <img src="static/images/qualitative.jpg" alt="Qualitative" width="900" />
+            <h2 class="subtitle has-text-centered"><b>Qualitative examples across domains.</b></h2>
+            Brief notes.
+          </div>
         </div>
       </div>
     </div>
   </section>
+  -->
 
-
-  <!-- Video carousel -->
-  <!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>  -->
-  <!-- End video carousel -->
-
-
-
-
-
-
-  <!-- Paper poster -->
-  <!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550"></iframe>
-      </div>
-    </div>
-  </section> -->
-  <!--End paper poster -->
-
-
-  <!--BibTex citation -->
+  <!-- BibTeX -->
   <section class="section hero" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTex</h2>
-      <pre><code>
-        @inproceedings{lin2024stable,
-          title={Stable Diffusion Segmentation for Biomedical Images with Single-step Reverse Process},
-          author={Lin, Tianyu and Chen, Zhiguang and Yan, Zhonghao and Yu, Weijiang and Zheng, Fudan},
-          booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-          year={2024},
-          organization={Springer}
-        }        
-      </code></pre>
+      <h2 class="title">BibTeX</h2>
+<pre><code>@article{liao2025forla,
+  title   = {FORLA: Federated Object-centric Representation Learning with Slot Attention},
+  author  = {Liao, Guiqiu and Jogan, Matja&#382; and Eaton, Eric and Hashimoto, Daniel A.},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2025}
+}</code></pre>
     </div>
   </section>
-  <!--End BibTex citation -->
 
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
-
             <p>
               This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              
+                target="_blank">Academic Project Page Template</a>, adapted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
               <br> This website is licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
-
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Statcounter tracking code -->
-
-  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-  <!-- End of Statcounter Code -->
+  <!-- (Optional) Statcounter tracking code -->
 
 </body>
-
 </html>
