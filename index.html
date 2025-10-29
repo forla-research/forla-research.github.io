@@ -62,9 +62,10 @@
                 <sup>1</sup>PCASO Laboratory, Dept. of Surgery, University of Pennsylvania<br>
                 <sup>2</sup>Dept. of Computer and Information Science, University of Pennsylvania
               </span>  
-              <span class="author-block" style="background: linear-gradient(to right, rgb(75,0,130), rgb(135,206,235), rgb(75,0,130)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;"><b>Neurips2025</b></span>
+              </div>
+            <div class="is-size-4 publication">
+              <span class="author-block" style="background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;"><b>NeurIPS2025</b></span>
             </div>
-
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- ArXiv -->
@@ -76,12 +77,12 @@
                   </a>
                 </span>
 
-                <!-- PDF -->
+                <!-- OpenReview -->
                 <span class="link-block">
-                  <a href="files/FORLA.pdf" target="_blank"
+                  <a href="https://openreview.net/forum?id=WlVBCT5pbB" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>PDF</span>
+                    <span class="icon"><i class="fas fa-file-alt"></i></span>
+                    <span>OpenReview</span>
                   </a>
                 </span>
 
@@ -91,6 +92,15 @@
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Dataset -->
+                <span class="link-block">
+                  <a href="https://github.com/PCASOlab/FORLA/blob/main/docs/data.md" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>Dataset</span>
                   </a>
                 </span>
 
@@ -109,7 +119,7 @@
         <!-- Put your figure at static/images/forla_stages.jpg -->
         <img src="./static/videos/method.gif" alt="FORLA two-stage pipeline" width="900" />
         <h4 class="subtitle has-text-centered">
-          Two-stage training pipeline. <b>Stage&nbsp;1:</b> representation distillation &amp; alignment (EMA teacher–student).
+          FORLA two-stage training pipeline. <b>Stage&nbsp;1:</b> representation distillation &amp; alignment (EMA teacher–student).
           <b>Stage&nbsp;2:</b> federated representation rediscovery (Local &amp; Global FedAvg).
         </h4>
       </div>
@@ -117,34 +127,13 @@
   </section>
   <!-- End teaser -->
 
-  <!-- Highlights -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
-            Highlights
-          </h2>
-        </div>
-      </div>
-      <div class="content">
-        <p>
-          🌟 <b>Federated object-centric learning:</b> learns object-level slots that transfer across heterogeneous clients without labels.<br>
-          🌟 <b>Shared adapter + slot attention:</b> collaboratively adapts foundation-model features and reconstructs compact representations.<br>
-          🌟 <b>Two-branch teacher–student:</b> student reconstructs full features; teacher supervises low-dimensional adapted features via EMA.<br>
-          🌟 <b>Cross-domain alignment:</b> slot attention bridges clients to discover distributed concepts.<br>
-          🌟 <b>Strong results:</b> outperforms centralized baselines on object discovery and generalizes across domains with a compact universal representation.
-        </p>
-      </div>
-    </div>
-  </section>
 
   <!-- Motivation -->
   <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), rgb(0, 46, 252), skyblue, rgb(0, 46, 252), rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
             Motivation
           </h2>
           <h5 class="title is-5" style="text-align: center;">
@@ -188,12 +177,62 @@
     </div>
   </section>
 
+
+  
+  <!-- Highlights -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), rgb(0, 46, 252), skyblue, rgb(0, 46, 252), rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+            Highlights
+          </h2>
+        </div>
+      </div>
+      <div class="content">
+        <p>
+          🌟 <b>Federated object-centric learning:</b> learns object-level slots that transfer across heterogeneous clients without labels.<br>
+          🌟 <b>Shared adapter + slot attention:</b> collaboratively adapts foundation-model features and reconstructs compact representations.<br>
+          🌟 <b>Two-branch teacher–student:</b> student reconstructs full features; teacher supervises low-dimensional adapted features via EMA.<br>
+          🌟 <b>Cross-domain alignment:</b> slot attention bridges clients to discover distributed concepts.<br>
+          🌟 <b>Strong results:</b> outperforms centralized baselines on object discovery and generalizes across domains with a compact universal representation.
+        </p>
+      </div>
+      <div class="hero-body">
+            <img src="./static/images/PCA_mask.png" alt="Stage 1 overview" width="1200" />
+            <h4 class="subtitle has-text-centered"><b> 🌟FORLA can be used for unsupervised federated feature representation adaptation;
+              🌟FORLA can also be used for unsupervised federated object segmentation
+            </b></h4>
+      </div>
+    </div>
+  </section>
+  <!-- Federated representation  -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), rgb(0, 46, 252), skyblue, rgb(0, 46, 252), rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+            Stage 1: Representation Distillation &amp; Alignment
+          </h2>
+          <h5 class="title is-5" style="text-align: center;">
+            EMA teacher–student decoders align adapted features from foundation models.
+          </h5>
+          <div class="hero-body">
+            <img src="./static/images/PCA_mask.png" alt="Stage 1 overview" width="1200" />
+            <h4 class="subtitle has-text-centered"><b> 🌟FORLA can be used for unsupervised federated feature representation adaptation, which produce more generalizale feature when new domains are intr , .</b></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- Stage 1 -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), rgb(0, 46, 252), skyblue, rgb(0, 46, 252), rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
             Stage 1: Representation Distillation &amp; Alignment
           </h2>
           <h5 class="title is-5" style="text-align: center;">
@@ -213,7 +252,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), rgb(0, 46, 252), skyblue, rgb(0, 46, 252), rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
             Stage 2: Federated Representation Rediscovery
           </h2>
           <h5 class="title is-5" style="text-align: center;">
