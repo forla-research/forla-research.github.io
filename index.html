@@ -195,7 +195,7 @@
           🌟 <b>Shared adapter + slot attention:</b> collaboratively adapts foundation-model features and reconstructs compact representations.<br>
           🌟 <b>Two-branch teacher–student:</b> student reconstructs full features; teacher supervises low-dimensional adapted features via EMA.<br>
           🌟 <b>Cross-domain alignment:</b> slot attention bridges clients to discover distributed concepts.<br>
-          🌟 <b>Strong results:</b> outperforms centralized baselines on object discovery and generalizes across domains with a compact universal representation.
+          🌟 <b>Strong results:</b> outperforms centralized baselines on object discovery and generalizes across domains with universal representation.
         </p>
       </div>
       <div class="hero-body">
@@ -204,66 +204,71 @@
               🌟FORLA can also be used for <b> unsupervised federated object segmentation</b> 
              </h4>
       </div>
-
-
-      <div class="container is-max-desktop has-text-centered">
-        
-
-        <div class="table-container">
-          <table class="table is-fullwidth no-border">
-            <thead>
-              <tr>
-                <th>Input</th>
-                <th>SAM (SA adapted)</th>
-                <th>DINO (SA adapted)</th>
-                <th>FORLA</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Video group 1 -->
-              <tr>
-                <td><img src="./static/videos/output_gifs1/video1_in.gif" alt="Original 1"></td>
-                <td><img src="./static/videos/output_gifs1/video1_sam.gif" alt="SAM 1"></td>
-                <td><img src="./static/videos/output_gifs1/video1_dino.gif" alt="DINO 1"></td>
-                <td><img src="./static/videos/output_gifs1/video1_forla.gif" alt="FORLA 1"></td>
-              </tr>
-
-              <!-- Video group 2 -->
-              <tr>
-                <td><img src="./static/videos/output_gifs2/video1_in.gif" alt="Original 2"></td>
-                <td><img src="./static/videos/output_gifs2/video1_sam.gif" alt="SAM 2"></td>
-                <td><img src="./static/videos/output_gifs2/video1_dino.gif" alt="DINO 2"></td>
-                <td><img src="./static/videos/output_gifs2/video1_forla.gif" alt="FORLA 2"></td>
-              </tr>
-
-              <!-- Video group 3 -->
-              <tr>
-                <td><img src="./static/videos/output_gifs3/video1_in.gif" alt="Original 3"></td>
-                <td><img src="./static/videos/output_gifs3/video1_sam.gif" alt="SAM 3"></td>
-                <td><img src="./static/videos/output_gifs3/video1_dino.gif" alt="DINO 3"></td>
-                <td><img src="./static/videos/output_gifs3/video1_forla.gif" alt="FORLA 3"></td>
-              </tr>
-
-              <!-- Video group 4 -->
-              <tr>
-                <td><img src="./static/videos/output_gifs4/video1_in.gif" alt="Original 4"></td>
-                <td><img src="./static/videos/output_gifs4/video1_sam.gif" alt="SAM 4"></td>
-                <td><img src="./static/videos/output_gifs4/video1_dino.gif" alt="DINO 4"></td>
-                <td><img src="./static/videos/output_gifs4/video1_forla.gif" alt="FORLA 4"></td>
-              </tr>
-            </tbody>
-          </table>
-          
-        <h4 class="subtitle has-text-centered">
-          Comparison across <b>SAM (feature adapted with slot attention )</b>,
-          <b>DINO (SA adapted)</b>, and <b>FORLA</b> on sample videos. With vanilla RNN video inference, FORLA is able to produce more slot attention masks.
-        </h4>
-        </div>
-      </div>
+  
     </div>
   </section>
+
+
+<section class="section hero ">
+    <div class="container is-max-desktop has-text-centered">
+        
+
+      <div class="table-container">
+        <table class="table is-fullwidth no-border">
+          <thead>
+            <tr>
+              <th>Input</th>
+              <th>SAM (SA adapted)</th>
+              <th>DINO (SA adapted)</th>
+              <th>FORLA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Video group 1 -->
+            <tr>
+              <td><img src="./static/videos/output_gifs1/video1_in.gif" alt="Original 1"></td>
+              <td><img src="./static/videos/output_gifs1/video1_sam.gif" alt="SAM 1"></td>
+              <td><img src="./static/videos/output_gifs1/video1_dino.gif" alt="DINO 1"></td>
+              <td><img src="./static/videos/output_gifs1/video1_forla.gif" alt="FORLA 1"></td>
+            </tr>
+
+            <!-- Video group 2 -->
+            <tr>
+              <td><img src="./static/videos/output_gifs2/video1_in.gif" alt="Original 2"></td>
+              <td><img src="./static/videos/output_gifs2/video1_sam.gif" alt="SAM 2"></td>
+              <td><img src="./static/videos/output_gifs2/video1_dino.gif" alt="DINO 2"></td>
+              <td><img src="./static/videos/output_gifs2/video1_forla.gif" alt="FORLA 2"></td>
+            </tr>
+
+            <!-- Video group 3 -->
+            <tr>
+              <td><img src="./static/videos/output_gifs3/video1_in.gif" alt="Original 3"></td>
+              <td><img src="./static/videos/output_gifs3/video1_sam.gif" alt="SAM 3"></td>
+              <td><img src="./static/videos/output_gifs3/video1_dino.gif" alt="DINO 3"></td>
+              <td><img src="./static/videos/output_gifs3/video1_forla.gif" alt="FORLA 3"></td>
+            </tr>
+
+            <!-- Video group 4 -->
+            <tr>
+              <td><img src="./static/videos/output_gifs4/video1_in.gif" alt="Original 4"></td>
+              <td><img src="./static/videos/output_gifs4/video1_sam.gif" alt="SAM 4"></td>
+              <td><img src="./static/videos/output_gifs4/video1_dino.gif" alt="DINO 4"></td>
+              <td><img src="./static/videos/output_gifs4/video1_forla.gif" alt="FORLA 4"></td>
+            </tr>
+          </tbody>
+        </table>
+        
+      <h4 class="subtitle has-text-centered">
+        Comparison across <b>SAM (feature adapted with slot attention )</b>,
+        <b>DINO (SA adapted)</b>, and <b>FORLA</b> on sample videos. With vanilla RNN video inference, FORLA is able to produce more slot attention masks.
+      </h4>
+    </div>
+  </div>
+</section>
+
+
   <!-- Federated representation  -->
-  <section class="section hero ">
+  <section class="section hero is-light ">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-five-fifths">
