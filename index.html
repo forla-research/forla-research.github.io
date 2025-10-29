@@ -200,9 +200,9 @@
       </div>
       <div class="hero-body">
             <img src="./static/images/PCA_mask.png" alt="Stage 1 overview" width="1200" />
-            <h4 class="subtitle has-text-centered"><b> 🌟FORLA can be used for unsupervised federated feature representation adaptation;
-              🌟FORLA can also be used for unsupervised federated object segmentation
-            </b></h4>
+            <h4 class="subtitle has-text-centered">🌟FORLA can be used for <b> unsupervised federated feature representation adaptation</b> ;
+              🌟FORLA can also be used for <b> unsupervised federated object segmentation</b> 
+             </h4>
       </div>
 
 
@@ -254,8 +254,8 @@
             </tbody>
           </table>
           
-        <h4 class="subtitle is-6">
-          Comparison across, <b>SAM (feature adapted with slot attention )</b>,
+        <h4 class="subtitle has-text-centered">
+          Comparison across <b>SAM (feature adapted with slot attention )</b>,
           <b>DINO (SA adapted)</b>, and <b>FORLA</b> on sample videos. With vanilla RNN video inference, FORLA is able to produce more slot attention masks.
         </h4>
         </div>
@@ -263,19 +263,17 @@
     </div>
   </section>
   <!-- Federated representation  -->
-  <section class="section hero is-light">
+  <section class="section hero ">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), rgb(0, 46, 252), skyblue, rgb(0, 46, 252), rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
-            Stage 1: Representation Distillation &amp; Alignment
+        <div class="column is-five-fifths">
+          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), skyblue, rgb(0, 46, 252), skyblue, rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+             Individual/Centralized training vs. FORLA
           </h2>
-          <h5 class="title is-5" style="text-align: center;">
-            EMA teacher–student decoders align adapted features from foundation models.
-          </h5>
+           
           <div class="hero-body">
-            <img src="./static/images/PCA_mask.png" alt="Stage 1 overview" width="1200" />
-            <h4 class="subtitle has-text-centered"><b> 🌟FORLA can be used for unsupervised federated feature representation adaptation, which produce more generalizale feature when new domains are intr , .</b></h4>
+             <img src="./static/images/reshuffle.png" alt="Stage 1 overview" style="width: 100%; height: auto;"/>
+            <h4 class="subtitle has-text-centered"> FORLA scales up SA models under different domain combination and outperforms centralized training.</h4>
           </div>
         </div>
       </div>
