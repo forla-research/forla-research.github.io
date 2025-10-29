@@ -18,7 +18,7 @@ table.no-border th {
 /* Style for GIFs */
 table.no-border img {
   border-radius: 1px;
-  box-shadow: 0 0.6em 1.2em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.6em 0.2em rgba(0, 0, 0, 0.15);
   width: 100%;
   height: auto;
 }

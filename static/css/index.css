@@ -748,6 +748,9 @@ a:focus {
     box-shadow: none !important;
   }
 }
+  
 
-
-
+.section.hero .container {
+  border-top: 2px solid #ddd;  /* optional: inner line limited to container width */
+  padding-top: 3rem;
+}

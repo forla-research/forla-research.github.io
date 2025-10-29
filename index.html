@@ -47,7 +47,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">
+            <h1 class="title is-1 ">
               FORLA: Federated Object-centric Representation Learning with Slot Attention
             </h1>
             <div class="is-size-5 publication-authors">
@@ -110,15 +110,12 @@
     <div class="container is-max-desktop">
         <!-- Put your figure at static/images/forla_stages.jpg -->
         <img src="./static/videos/method.gif" alt="FORLA two-stage pipeline" width="900" />
-        <h4 class="subtitle has-text-centered">
-          FORLA two-stage training pipeline. <b>Stage&nbsp;1:</b> representation distillation &amp; alignment (EMA teacher–student).
-          <b>Stage&nbsp;2:</b> federated representation rediscovery (Local &amp; Global FedAvg).
-        </h4>
+         
     </div>
   </section>
   <!-- End teaser -->
   <!-- Motivation -->
-  <section class="section hero">
+  <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-five-fifths">
@@ -129,7 +126,7 @@
           <div class="columns is-centered">
             <div class="column">
               <div class="content">
-                <h4 class="title is-5" style="text-align: center;">🔒 Challenges</h4>
+                <h4 class="title is-5" style="text-align: center;">Challenges</h4>
                 <p>
                   (1) Learn features <i>jointly informative</i> across clients with no labels.<br>
                   (2) Disentangle <i>client-specific factors</i> while preserving shared object structure.
@@ -138,7 +135,7 @@
             </div>
 
             <div class="column">
-              <h4 class="title is-5" style="text-align: center;">🔑 Solutions</h4>
+              <h4 class="title is-5" style="text-align: center;">Solutions</h4>
               <div class="columns is-centered">
                 <div class="column content">
                   <p>
@@ -166,19 +163,19 @@
 
   
   <!-- Highlights -->
-  <section class="section hero is-light">
+  <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-five-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(120, 120, 122) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
-            Highlights
+          <h2 class="title is-4" style="background: linear-gradient(to right, rgb(120, 120, 122) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            Multi-domain unsupervised FL
           </h2>
         </div>
       </div>
       
       <img src="./static/images/PCA_mask.png" alt="Stage 1 overview" width="1200" />
-      <h4 class="subtitle has-text-centered">🌟FORLA can be used for <b> unsupervised federated feature representation adaptation</b> ;
-        🌟FORLA can also be used for <b> unsupervised federated object segmentation</b> 
+      <h4 class="subtitle has-text-centered">FORLA can be used for <b> unsupervised federated feature representation adaptation</b> ;
+        FORLA can also be used for <b> unsupervised federated object segmentation</b> 
         </h4>
      
   
@@ -245,11 +242,11 @@
 
 
   <!-- Federated representation  -->
-  <section class="section hero is-light ">
+  <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-five-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right,rgb(120, 120, 122)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+          <h2 class="title is-4" style="background: linear-gradient(to right,rgb(120, 120, 122)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
              Individual/Centralized training vs. FORLA
           </h2>
            
@@ -261,30 +258,33 @@
       </div>
     </div>
   </section>
- 
- <!-- Highlights -->
+  <!-- Federated representation  -->
   <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(120, 120, 122) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
-            Conclusions
+        <div class="column is-five-fifths">
+          <h2 class="title is-4" style="background: linear-gradient(to right,rgb(120, 120, 122)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+          FL representation on surgical domain
           </h2>
+          <img src="./static/images/supplement4.jpg" alt="Stage 1 overview" style="width: 100%; height: auto;"/>
         </div>
       </div>
-      <div class="content">
-        <p>
-          🌟 <b>Federated object-centric learning:</b> learns object-level slots that transfer across heterogeneous clients without labels.<br>
-          🌟 <b>Shared adapter + slot attention:</b> collaboratively adapts foundation-model features and reconstructs compact representations.<br>
-          🌟 <b>Two-branch teacher–student:</b> student reconstructs full features; teacher supervises low-dimensional adapted features via EMA.<br>
-          🌟 <b>Cross-domain alignment:</b> slot attention bridges clients to discover distributed concepts.<br>
-          🌟 <b>Strong results:</b> outperforms centralized baselines on object discovery and generalizes across domains with universal representation.
-        </p>
-      </div>
-      
-  
     </div>
   </section>
+ <!-- Federated representation  -->
+  <section class="section hero ">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+          <h2 class="title is-4" style="background: linear-gradient(to right,rgb(120, 120, 122)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+          FL representation on natural domain
+          </h2>
+          <img src="./static/images/supplement3.jpg" alt="Stage 4 overview" style="width: 100%; height: auto;"/>
+        </div>
+      </div>
+    </div>
+  </section>
+   
   <!-- BibTeX -->
   <section class="section hero" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -297,26 +297,7 @@
 }</code></pre>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic Project Page Template</a>, adapted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              <br> This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+ 
 
   <!-- (Optional) Statcounter tracking code -->
 
