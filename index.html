@@ -43,8 +43,7 @@
 <body>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-body">
+  <section class="hero"> 
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
@@ -67,7 +66,6 @@
               <span class="author-block" style="background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;"><b>NeurIPS2025</b></span>
             </div>
             <div class="column has-text-centered">
-              <div class="publication-links">
                 <!-- ArXiv -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/2506.02964" target="_blank"
@@ -103,41 +101,29 @@
                     <span>Dataset</span>
                   </a>
                 </span>
-
-              </div>
             </div>
           </div>
-        </div>
-      </div>
     </div>
   </section>
-
   <!-- Teaser -->
   <section class="hero teaser">
     <div class="container is-max-desktop">
-      <div class="hero-body has-text-centered">
         <!-- Put your figure at static/images/forla_stages.jpg -->
         <img src="./static/videos/method.gif" alt="FORLA two-stage pipeline" width="900" />
         <h4 class="subtitle has-text-centered">
           FORLA two-stage training pipeline. <b>Stage&nbsp;1:</b> representation distillation &amp; alignment (EMA teacher–student).
           <b>Stage&nbsp;2:</b> federated representation rediscovery (Local &amp; Global FedAvg).
         </h4>
-      </div>
     </div>
   </section>
   <!-- End teaser -->
-
-
   <!-- Motivation -->
   <section class="section hero">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), rgb(0, 46, 252), skyblue, rgb(0, 46, 252), rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
-            Motivation
-          </h2>
-          <h5 class="title is-5" style="text-align: center;">
-            Unlabeled, heterogeneous client data demands label-free, generalizable representations.
+        <div class="column is-five-fifths">
+          <h5 class="content is-size-5" style="text-align: left;">
+            Learning efficient visual representations across heterogeneous unlabeled datasets remains a central challenge in federated learning. Effective federated representations require features that are jointly informative across clients while disentangling client-specific factors without supervision. We thus introduce FORLA, a novel framework for federated object-centric representation learning and feature adaptation using unsupervised slot attention. At the core of our method is a shared feature adapter, trained collaboratively across clients to adapt features from foundation models, and a shared slot attention module that learns to reconstruct the adapted features. To optimize this adapter, we design a two-branch student–teacher architecture. In each client, a student decoder learns to reconstruct full features from foundation models, while a teacher decoder reconstructs their adapted, low-dimensional counterpart. The shared slot attention module bridges cross-domain learning by aligning object-level representations across clients. Experiments in multiple real-world  datasets show that our framework not only outperforms centralized baselines on object discovery but also learns a compact, universal representation that generalizes well across domains. This work highlights federated slot attention as an effective tool for scalable, unsupervised visual representation learning from cross-domain data with distributed concepts.
           </h5>
 
           <div class="columns is-centered">
@@ -183,27 +169,18 @@
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), rgb(0, 46, 252), skyblue, rgb(0, 46, 252), rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+        <div class="column is-five-fifths">
+          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(120, 120, 122) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
             Highlights
           </h2>
         </div>
       </div>
-      <div class="content">
-        <p>
-          🌟 <b>Federated object-centric learning:</b> learns object-level slots that transfer across heterogeneous clients without labels.<br>
-          🌟 <b>Shared adapter + slot attention:</b> collaboratively adapts foundation-model features and reconstructs compact representations.<br>
-          🌟 <b>Two-branch teacher–student:</b> student reconstructs full features; teacher supervises low-dimensional adapted features via EMA.<br>
-          🌟 <b>Cross-domain alignment:</b> slot attention bridges clients to discover distributed concepts.<br>
-          🌟 <b>Strong results:</b> outperforms centralized baselines on object discovery and generalizes across domains with universal representation.
-        </p>
-      </div>
-      <div class="hero-body">
-            <img src="./static/images/PCA_mask.png" alt="Stage 1 overview" width="1200" />
-            <h4 class="subtitle has-text-centered">🌟FORLA can be used for <b> unsupervised federated feature representation adaptation</b> ;
-              🌟FORLA can also be used for <b> unsupervised federated object segmentation</b> 
-             </h4>
-      </div>
+      
+      <img src="./static/images/PCA_mask.png" alt="Stage 1 overview" width="1200" />
+      <h4 class="subtitle has-text-centered">🌟FORLA can be used for <b> unsupervised federated feature representation adaptation</b> ;
+        🌟FORLA can also be used for <b> unsupervised federated object segmentation</b> 
+        </h4>
+     
   
     </div>
   </section>
@@ -272,20 +249,42 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-five-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), skyblue, rgb(0, 46, 252), skyblue, rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+          <h2 class="title is-2" style="background: linear-gradient(to right,rgb(120, 120, 122)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
              Individual/Centralized training vs. FORLA
           </h2>
            
-          <div class="hero-body">
-             <img src="./static/images/reshuffle.png" alt="Stage 1 overview" style="width: 100%; height: auto;"/>
-            <h4 class="subtitle has-text-centered"> FORLA scales up SA models under different domain combination and outperforms centralized training.</h4>
-          </div>
+          
+          <img src="./static/images/reshuffle.png" alt="Stage 1 overview" style="width: 100%; height: auto;"/>
+        <h4 class="subtitle has-text-centered"> FORLA scales up SA models under different domain combination and outperforms centralized training.</h4>
+    
         </div>
       </div>
     </div>
   </section>
  
-
+ <!-- Highlights -->
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(120, 120, 122) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
+            Conclusions
+          </h2>
+        </div>
+      </div>
+      <div class="content">
+        <p>
+          🌟 <b>Federated object-centric learning:</b> learns object-level slots that transfer across heterogeneous clients without labels.<br>
+          🌟 <b>Shared adapter + slot attention:</b> collaboratively adapts foundation-model features and reconstructs compact representations.<br>
+          🌟 <b>Two-branch teacher–student:</b> student reconstructs full features; teacher supervises low-dimensional adapted features via EMA.<br>
+          🌟 <b>Cross-domain alignment:</b> slot attention bridges clients to discover distributed concepts.<br>
+          🌟 <b>Strong results:</b> outperforms centralized baselines on object discovery and generalizes across domains with universal representation.
+        </p>
+      </div>
+      
+  
+    </div>
+  </section>
   <!-- BibTeX -->
   <section class="section hero" id="BibTeX">
     <div class="container is-max-desktop content">
