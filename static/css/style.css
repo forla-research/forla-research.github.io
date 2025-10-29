@@ -1,0 +1,55 @@
+/* Remove all table borders and background lines */
+table.no-border,
+table.no-border th,
+table.no-border td {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Center and style headers */
+table.no-border th {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: none !important;
+  padding-bottom: 0.1rem;
+}
+
+/* Style for GIFs */
+table.no-border img {
+  border-radius: 1px;
+  box-shadow: 0 0.6em 1.2em rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: auto;
+}
+/* Remove white background and all borders from the comparison table */
+table.no-border,
+table.no-border th,
+table.no-border td {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Optional: center headers and reduce padding for tighter layout */
+table.no-border th {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: #ddd; /* optional: soft gray header text if your page is dark */
+}
+
+/* Make GIFs stand out cleanly without a white box */
+table.no-border img {
+  border-radius: 10px;
+  box-shadow: 0 0.6em 1.2em rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: auto;
+  background: transparent !important; /* ensure no background fill */
+}
+
+/* (Optional) Remove Bulma's default zebra stripe shading */
+.table tbody tr:nth-child(even),
+.table tbody tr:nth-child(odd) {
+  background: transparent !important;
+}

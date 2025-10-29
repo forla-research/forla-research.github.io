@@ -51,19 +51,21 @@ def stitched_image_to_gif(
 
             # Convert from BGR (OpenCV) to RGB (for GIF)
             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            frames.append(frame_rgb)
+            frame_resized = cv2.resize(frame_rgb, (128, 128), interpolation=cv2.INTER_AREA)
+
+            frames.append(frame_resized)
 
         base_name = os.path.splitext(os.path.basename(img_path))[0]
         out_path = os.path.join(output_folder, f"{base_name}.gif")
 
         # Duration per frame = 1 / fps seconds
-        imageio.mimsave(out_path, frames, duration=1 / fps)
+        imageio.mimsave(out_path, frames, duration=1000 / fps, loop=0,subrectangles=False)
         print(f"[OK] Wrote {out_path} ({len(frames)} frames, {frame_W}x{H}@{fps}fps)")
 
 if __name__ == "__main__":
     stitched_image_to_gif(
-        input_folder="./static/video1/",
+        input_folder="./static/video5/",
         output_folder="./output_gifs/",
         frames_per_strip=10,
-        fps=2,
+        fps=7,
     )

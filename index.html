@@ -204,6 +204,62 @@
               🌟FORLA can also be used for unsupervised federated object segmentation
             </b></h4>
       </div>
+
+
+      <div class="container is-max-desktop has-text-centered">
+        
+
+        <div class="table-container">
+          <table class="table is-fullwidth no-border">
+            <thead>
+              <tr>
+                <th>Input</th>
+                <th>SAM (SA adapted)</th>
+                <th>DINO (SA adapted)</th>
+                <th>FORLA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Video group 1 -->
+              <tr>
+                <td><img src="./static/videos/output_gifs1/video1_in.gif" alt="Original 1"></td>
+                <td><img src="./static/videos/output_gifs1/video1_sam.gif" alt="SAM 1"></td>
+                <td><img src="./static/videos/output_gifs1/video1_dino.gif" alt="DINO 1"></td>
+                <td><img src="./static/videos/output_gifs1/video1_forla.gif" alt="FORLA 1"></td>
+              </tr>
+
+              <!-- Video group 2 -->
+              <tr>
+                <td><img src="./static/videos/output_gifs2/video1_in.gif" alt="Original 2"></td>
+                <td><img src="./static/videos/output_gifs2/video1_sam.gif" alt="SAM 2"></td>
+                <td><img src="./static/videos/output_gifs2/video1_dino.gif" alt="DINO 2"></td>
+                <td><img src="./static/videos/output_gifs2/video1_forla.gif" alt="FORLA 2"></td>
+              </tr>
+
+              <!-- Video group 3 -->
+              <tr>
+                <td><img src="./static/videos/output_gifs3/video1_in.gif" alt="Original 3"></td>
+                <td><img src="./static/videos/output_gifs3/video1_sam.gif" alt="SAM 3"></td>
+                <td><img src="./static/videos/output_gifs3/video1_dino.gif" alt="DINO 3"></td>
+                <td><img src="./static/videos/output_gifs3/video1_forla.gif" alt="FORLA 3"></td>
+              </tr>
+
+              <!-- Video group 4 -->
+              <tr>
+                <td><img src="./static/videos/output_gifs4/video1_in.gif" alt="Original 4"></td>
+                <td><img src="./static/videos/output_gifs4/video1_sam.gif" alt="SAM 4"></td>
+                <td><img src="./static/videos/output_gifs4/video1_dino.gif" alt="DINO 4"></td>
+                <td><img src="./static/videos/output_gifs4/video1_forla.gif" alt="FORLA 4"></td>
+              </tr>
+            </tbody>
+          </table>
+          
+        <h4 class="subtitle is-6">
+          Comparison across, <b>SAM (feature adapted with slot attention )</b>,
+          <b>DINO (SA adapted)</b>, and <b>FORLA</b> on sample videos. With vanilla RNN video inference, FORLA is able to produce more slot attention masks.
+        </h4>
+        </div>
+      </div>
     </div>
   </section>
   <!-- Federated representation  -->
@@ -225,72 +281,7 @@
       </div>
     </div>
   </section>
-
-
-  <!-- Stage 1 -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), rgb(0, 46, 252), skyblue, rgb(0, 46, 252), rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
-            Stage 1: Representation Distillation &amp; Alignment
-          </h2>
-          <h5 class="title is-5" style="text-align: center;">
-            EMA teacher–student decoders align adapted features from foundation models.
-          </h5>
-          <div class="hero-body">
-            <img src="./static/images/forla_stages.jpg" alt="Stage 1 overview" width="900" />
-            <h4 class="subtitle has-text-centered"><b>The teacher reconstructs adapted features; the student reconstructs full features.</b></h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stage 2 -->
-  <section class="section hero">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, rgb(0, 46, 252), rgb(0, 46, 252), skyblue, rgb(0, 46, 252), rgb(0, 46, 252)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
-            Stage 2: Federated Representation Rediscovery
-          </h2>
-          <h5 class="title is-5" style="text-align: center;">
-            Local + Global FedAvg refine slot attention to align object-centric representations across clients.
-          </h5>
-          <p style="text-align: left;">
-            <b>👉 Local FedAvg:</b> synchronizes teacher–student branches within each client cohort.<br>
-            <b>👉 Global FedAvg:</b> aggregates adapters and slot attention on the server to unify cross-domain object slots.
-          </p>
-          <!-- Optional stage-specific image -->
-          <!-- <div class="hero-body">
-            <img src="static/images/stage2_specific.png" alt="Stage 2 visualization" width="1000" />
-            <h2 class="subtitle has-text-centered"><b>Stage 2 aggregation.</b></h2>
-          </div> -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Other Qualitative (optional) -->
-  <!-- Keep/remove this block as needed
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2" style="background: linear-gradient(to right, indigo, indigo, skyblue, indigo, indigo); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.5;">
-            Additional Qualitative Results
-          </h2>
-          <div class="hero-body">
-            <img src="static/images/qualitative.jpg" alt="Qualitative" width="900" />
-            <h2 class="subtitle has-text-centered"><b>Qualitative examples across domains.</b></h2>
-            Brief notes.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
+ 
 
   <!-- BibTeX -->
   <section class="section hero" id="BibTeX">
