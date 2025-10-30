@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://forla-research.github.io/sitemap.xml
